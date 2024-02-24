@@ -213,7 +213,7 @@ burnin = 1000
 iter = 1000
 #保存记录的步长
 keep = 20
-#主题范围（从5到50，以步长5进行递增）
+#主题范围（从2到20，以步长2进行递增）
 sequ <- seq(2, 20, 2)
 #迭代进行试验
 fitted_many <- lapply(sequ, function(k) LDA(SegmentLDAMatrix, k = k, method = "Gibbs",control = list(burnin = burnin, iter = iter, keep = keep) ))
